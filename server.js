@@ -49,6 +49,15 @@ app.get('/about', (req, res) => {
   });
 });
 
+// /projects - view file, rend header/footer, text to something, update header
+// commit, push to git, push to heroku
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    projectMessage: 'Here is my list of projects. It doesn\'t really exist'
+  });
+});
+
 // /bad - respond with JSON  with an errorMessage property
 app.get('/bad', (req, res) => {
   res.send({
